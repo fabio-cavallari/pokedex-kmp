@@ -31,5 +31,5 @@ val appModule = module {
     }
     factory<PokeApiClient> { PokeApiClient(get(parameters = { parametersOf(getHttpClientEngine()) })) }
 
-    viewModel { PokemonListViewModel() }
+    viewModel { PokemonListViewModel(get()) }
 }
